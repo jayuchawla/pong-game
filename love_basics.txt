@@ -1,0 +1,20 @@
+This function gets called only once, when the game is started, and is usually where you would load resources,
+initialize variables and set specific settings. All those things can be done anywhere else as well, 
+but doing them here means that they are done once only, saving a lot of system resources.
+
+Callback function used to update the state of the game every frame.
+
+In addition to simple drawing, the draw() function can rotate and scale the object at the same time,
+as well as offset the image (for example, to center the image at the chosen coordinates).
+love. graphics. draw() anchors from the top left corner by default.
+
+love.event.quit: The quit event is a signal for the event handler to close LÖVE. It's possible to abort the exit process with the love.
+
+love.keypressed: 
+function love.keypressed(key)
+	if key == 'escape' then
+        love.event.quit()
+	end
+end
+
+love.resize(w, h)
